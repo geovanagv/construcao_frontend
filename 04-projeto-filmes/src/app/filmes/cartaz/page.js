@@ -21,7 +21,7 @@ export default function page() {
 
 
     async function buscarFilmes() {
-        const resultado = await apiFilmes.get("/movie/upcoming?language=pt-BR")
+        const resultado = await apiFilmes.get("/movie/now_playing?language=pt-BR")
         const filmesRecebidos = resultado.data.results
         console.log(filmesRecebidos)
         setFilmes(filmesRecebidos)
@@ -30,7 +30,7 @@ export default function page() {
 
     return (
 
-        <Pagina titulo="Nos Cinemas">
+        <Pagina titulo="Filmes em Cartaz">
 
             <Row md={4}>
 
